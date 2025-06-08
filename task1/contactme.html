@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me | Gopika B</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="logo">Gopika B</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="contact">
+    <h2 class="animated-title">Let's Connect!</h2>
+    <p class="subtitle">Feel free to reach out to me through any of these platforms.</p>
+  </section>
+
+  <section class="section">
+    <h2>Contact Information</h2>
+    <ul class="contact-list">
+      <li><strong>Email:</strong> <a href="mailto:b.gopika27@gmail.com">b.gopika27@gmail.com</a></li>
+      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/gopika-b" target="_blank">Gopika B</a></li>
+      <li><strong>GitHub:</strong> <a href="https://github.com/hyunsinja" target="_blank">hyunsinja</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Gopika. All rights reserved.</p>
+  </footer>
+
+  <script>
+    gsap.from(".animated-title", {
+      duration: 1.5,
+      y: -50,
+      opacity: 0,
+      ease: "power4.out"
+    });
+
+    gsap.from(".subtitle", {
+      duration: 1,
+      y: 30,
+      opacity: 0,
+      delay: 0.5
+    });
+
+    gsap.from(".contact-list li", {
+      duration: 0.6,
+      x: -50,
+      opacity: 0,
+      stagger: 0.2,
+      delay: 1
+    });
+  </script>
+</body>
+</html>

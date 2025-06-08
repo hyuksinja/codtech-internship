@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gopika B | Resume</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="logo">Gopika B</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="./contactme.html">Contact</a></li>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2 class="animated-title">My Creative Tech Resume</h2>
+    <p class="subtitle">Passionate Techie | Aspiring Actress | Data Wizard</p>
+    <a class="cta" href="./contactme.html">Connect With Me</a>
+  </section>
+
+  <section id="summary" class="section">
+    <h2>Summary</h2>
+    <p>I’m a student at VIT Vellore, studying Computer Science and Business Systems. I love blending tech with creativity — be it data analysis, storytelling, or performance. I strive to excel in everything I do.</p>
+  </section>
+
+  <section id="education" class="section">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>B.Tech - VIT Vellore</strong> (2021 - Present)</li>
+      <li>Focus: Data, Innovation, Programming</li>
+      <li><strong>Christ Academy</strong> - High School</li>
+    </ul>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Programming:</strong> Python, Java, SQL</li>
+      <li><strong>Tools:</strong> Git, MySQL, Tableau</li>
+      <li><strong>Creative:</strong> Acting, Dancing, Music</li>
+      <li><strong>Soft Skills:</strong> Leadership, Communication</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Gopika. All rights reserved.</p>
+
+  </footer>
+
+  <script>
+    gsap.from(".animated-title", {
+      duration: 1.5,
+      y: -50,
+      opacity: 0,
+      ease: "bounce.out"
+    });
+
+    gsap.from(".profile-pic", {
+      duration: 1,
+      scale: 0.5,
+      opacity: 0,
+      delay: 0.5,
+      ease: "back.out(2)"
+    });
+
+    gsap.from(".cta", {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      delay: 1.2
+    });
+
+    gsap.utils.toArray(".section").forEach((section) => {
+      gsap.from(section, {
+        scrollTrigger: {
+          trigger: section,
+          start: "top 85%",
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1
+      });
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>gsap.registerPlugin(ScrollTrigger);</script>
+</body>
+</html>
